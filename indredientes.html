@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas do Vagnao</title>
+</head>
+<body>
+    <h1>Receitas do Vagnão</h1>
+
+    <script>
+
+        function pulaLinha(){
+            document.write("<br>");
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var ingredientes = [];
+
+        var quantidade = parseInt(prompt("Quantos ingredientes você vai adicionar? "));
+
+        contador = 1;
+
+        while(contador <= quantidade){
+
+            var ingrediente = prompt("Informe o ingrediente" + contador);
+
+            var repetidor =false;
+
+            for(var posicao = 0; posicao < ingredientes.length; posicao++){
+
+                if(ingredientes[posicao]== ingrediente){
+
+                    repetidor = true;
+                    alert("você já colocou esse ingrediente, por favor insera uma novo ingrediente")
+                    break;
+
+                }
+            }
+
+            if(repetidor == false){
+
+                ingredientes.push(ingrediente);
+
+                contador++;
+
+            }
+
+            
+        }
+
+        mostra(ingredientes);
+        console.log(ingredientes);
+    </script>
+</body>
+</html>

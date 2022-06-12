@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimendo Numeros Pares</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+   /*     var contador = 0;
+        while(contador <=100){
+            mostra(contador);
+            contador = contador + 3; //incrementa de dois em dois
+        }
+
+        var limite = parseInt(prompt("Entre com o numero limite"));
+        var nPares = 2
+
+        while(nPares <= limite){
+            mostra("pares; "  + nPares);
+            nPares = nPares + 2;
+        }
+*/
+
+        var limite =parseInt( prompt( "Entre com o numero limite"));
+        var nImpar = 1;
+
+        while(nImpar <=limite){
+            mostra("impar: " + nImpar);
+            nImpar = nImpar + 2;
+        }
+
+
+        mostra("fim");
+    </script>
+</body>
+</html>

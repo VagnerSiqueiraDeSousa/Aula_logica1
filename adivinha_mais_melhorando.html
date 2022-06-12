@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adivinha 1.1</title>
+</head>
+<body>
+
+    <input type="text"> <!-- criando a caixa de texto em html-->
+    <button>adivinhe o numero</button><!-- criando a caixa do botão em html-->
+
+    <script> // JavaScript
+        var numero = Math.round(Math.random() * 10); // guarda na memoria um numero entre  0 a 10
+        var input = document.querySelector("input"); // responsavel pela ação da caixa de texto
+
+        function verifica(){ //função que vai verificar as condições
+
+            if(input.value == numero){ // condiçaõ se
+
+                alert("Você ACERTOU! ");
+            }else{ // se não
+                
+                alert("Você ERROU!!!!");
+            }
+
+            input.value = ""; // para limpar o campo do input
+            input.focus();
+
+        }
+
+    var button = document.querySelector("button"); // variavel que vai dar ação ao comando no onclick
+    button.onclick = verifica;
+    </script>
+    
+</body>
+</html>
